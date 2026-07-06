@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!-- CONFIGURACIÓN GENERAL -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cosmos Explorer | Explora el Sistema Solar</title>
+
+    <meta name="description"
+        content="Cosmos Explorer es una aplicación web educativa para descubrir el Sistema Solar, los planetas, sus lunas, la exploración espacial y las misiones Voyager.">
+
+    <meta name="keywords"
+        content="Sistema Solar, planetas, lunas, Voyager, NASA, ESA, James Webb, exploración espacial, astronomía">
+
+    <meta name="author" content="Víctor Capellán">
+
+    <meta name="robots" content="index, follow">
+
+    <meta name="theme-color" content="#050816">
+
+    <!-- Icono -->
+
+    <link rel="icon" href="img/Pagina/Cosmos_logo.png" type="image/png">
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS Personalizado -->
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="#">
+
+                <img src="img/Pagina/Cosmos_logo.png" width="45">
+
+                Cosmos <span class="text-warning">Explorer</span>
+
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="bi bi-house-fill"></i>
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sistema">
+                            Sistema Solar
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planetas">
+                            Planetas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sistema-interactivo">
+                            Sistema 2D
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lunas">
+                            Lunas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#control">
+                            Control
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#historia">
+                            Historia
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#curiosidades">
+                            Curiosidades
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Noticias y Videos.html">
+                            Noticias
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <header class="hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <span class="badge bg-info mb-3">
+
+                        EXPLORA EL UNIVERSO
+
+                    </span>
+
+                    <h1>
+
+                        COSMOS
+
+                        <span>
+
+                            EXPLORER
+
+                        </span>
+
+                    </h1>
+
+                    <p class="lead">
+
+                        Viaja por el Sistema Solar,
+                        descubre los planetas,
+                        conoce las misiones espaciales
+                        más importantes de la historia
+                        y explora el Universo con información científica.
+
+                    </p>
+
+                    <div class="mt-4">
+
+                        <a href="#sistema" class="btn btn-warning btn-lg">
+
+                            <i class="bi bi-rocket-takeoff-fill"></i>
+
+                            Comenzar Exploración
+
+                        </a>
+
+                        <a href="#control" class="btn btn-outline-light btn-lg ms-3">
+
+                            <i class="bi bi-cpu-fill"></i>
+
+                            Centro de Control
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 text-center">
+
+                    <img src="img/Pagina/Universo.jpg" class="img-fluid hero-img" alt="Universo">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- ESTRELLAS -->
+    <!-- Se crearán con JavaScript -->
+
+    <div id="stars"></div>
+
+    <!-- AQUÍ COMIENZA EL RESTO DE LA PÁGINA -->
+
+    <section id="sistema" class="container py-5">
+
+        <div class="text-center">
+
+            <h2>
+
+                🌌 Nuestro Sistema Solar
+
+            </h2>
+
+            <p>
+
+                El Sistema Solar está formado por el Sol,
+                ocho planetas, planetas enanos,
+                cientos de lunas, millones de asteroides,
+                cometas y otros cuerpos celestes.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CARRUSEL -->
+
+    <section class="container py-5">
+
+        <div id="carouselSistemaSolar" class="carousel slide shadow-lg rounded overflow-hidden" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#carouselSistemaSolar" data-bs-slide-to="0"
+                    class="active"></button>
+
+                <button type="button" data-bs-target="#carouselSistemaSolar" data-bs-slide-to="1"></button>
+
+                <button type="button" data-bs-target="#carouselSistemaSolar" data-bs-slide-to="2"></button>
+
+                <button type="button" data-bs-target="#carouselSistemaSolar" data-bs-slide-to="3"></button>
+
+                <button type="button" data-bs-target="#carouselSistemaSolar" data-bs-slide-to="4"></button>
+
+                <button type="button" data-bs-target="#carouselSistemaSolar" data-bs-slide-to="5"></button>
+
+            </div>
+
+            <div class="carousel-inner">
+
+                <!-- Imagen 1 -->
+
+                <div class="carousel-item active">
+
+                    <img src="img/Carrousel/Sistema-Solar.avif" class="d-block w-100" alt="Sistema Solar">
+
+                    <div class="carousel-caption">
+
+                        <h2>Sistema Solar</h2>
+
+                        <p>
+                            Un recorrido por nuestro vecindario cósmico.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Imagen 2 -->
+
+                <div class="carousel-item">
+
+                    <img src="img/Carrousel/James-Webb.webp" class="d-block w-100" alt="James Webb">
+
+                    <div class="carousel-caption">
+
+                        <h2>James Webb</h2>
+
+                        <p>
+                            El telescopio espacial más potente jamás construido.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Imagen 3 -->
+
+                <div class="carousel-item">
+
+                    <img src="img/Carrousel/Voyager-1.png" class="d-block w-100" alt="Voyager">
+
+                    <div class="carousel-caption">
+
+                        <h2>Voyager 1</h2>
+
+                        <p>
+                            La nave humana más alejada de la Tierra, la cual contiene un disco de Oro con sonidos e
+                            imágenes de la Tierra.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Imagen 4 -->
+
+                <div class="carousel-item">
+
+                    <img src="img/Carrousel/Saturno-car.jpg" class="d-block w-100" alt="Saturno">
+
+                    <div class="carousel-caption">
+
+                        <h2>Saturno</h2>
+
+                        <p>
+                            El gigante de los anillos.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Imagen 5 -->
+
+                <div class="carousel-item">
+
+                    <img src="img/Carrousel/Jupiter-car.jpg" class="d-block w-100" alt="Jupiter">
+
+                    <div class="carousel-caption">
+
+                        <h2>Jupiter</h2>
+
+                        <p>
+                            El Planeta más grande del Sistema Solar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- Imagen 6 -->
+
+                <div class="carousel-item">
+
+                    <img src="img/Carrousel/Sol-Car.jpg" class="d-block w-100" alt="El Sol">
+
+                    <div class="carousel-caption">
+
+                        <h2>El Sol</h2>
+
+                        <p>
+                            La estrella al centro del Sistema Solar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev" data-bs-target="#carouselSistemaSolar" data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next" data-bs-target="#carouselSistemaSolar" data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CARD EL SOL -->
+
+    <section id="sol" class="container py-5">
+
+        <div class="text-center mb-5 sol">
+
+            <h2 class="display-4">
+
+                ☀ El Sol
+
+            </h2>
+
+            <p class="lead">
+
+                La estrella que hace posible la vida en nuestro Sistema Solar.
+
+            </p>
+
+        </div>
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6 mb-4">
+
+                <img src="img/Planetas/Sol-Unico.webp" class="img-fluid rounded shadow" alt="El Sol">
+
+            </div>
+
+            <div class="col-lg-6 sol">
+
+                <h3>
+
+                    Nuestra estrella
+
+                </h3>
+
+                <p>
+
+                    El Sol es una estrella de tipo G ubicada en el centro del Sistema Solar.
+                    Su enorme gravedad mantiene a los ocho planetas, planetas enanos,
+                    asteroides y cometas orbitando a su alrededor.
+
+                </p>
+
+                <p>
+
+                    Está compuesto principalmente por hidrógeno y helio.
+                    En su núcleo ocurre la fusión nuclear, donde millones de toneladas
+                    de hidrógeno se transforman en helio cada segundo, liberando
+                    cantidades inmensas de energía en forma de luz y calor.
+
+                </p>
+
+                <div class="row text-center mt-4">
+
+                    <div class="col-6 mb-3">
+
+                        <div class="card shadow h-100">
+
+                            <div class="card-body">
+
+                                <h4>
+
+                                    🌡 Temperatura
+
+                                </h4>
+
+                                <p>
+
+                                    5 500 °C (superficie)
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 mb-3">
+
+                        <div class="card shadow h-100">
+
+                            <div class="card-body">
+
+                                <h4>
+
+                                    📏 Diámetro
+
+                                </h4>
+
+                                <p>
+
+                                    1 392 700 km
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 mb-3">
+
+                        <div class="card shadow h-100">
+
+                            <div class="card-body">
+
+                                <h4>
+
+                                    ⚖ Masa
+
+                                </h4>
+
+                                <p>
+
+                                    1.989 × 10³⁰ kg
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-6 mb-3">
+
+                        <div class="card shadow h-100">
+
+                            <div class="card-body">
+
+                                <h4>
+
+                                    💡 Edad
+
+                                </h4>
+
+                                <p>
+
+                                    4.6 mil millones de años
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="btn btn-warning mt-3" onclick="abrirModalSol()">
+
+                    Conocer más
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PLANETAS -->
+
+    <section id="planetas" class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="display-5">
+
+                🪐 Los Planetas
+
+            </h2>
+
+            <p class="lead">
+
+                Explora cada planeta del Sistema Solar.
+
+            </p>
+
+        </div>
+
+        <!-- BUSCADOR -->
+
+        <div class="row justify-content-center BuscarPlaneta ">
+
+            <div class="col-lg-5">
+
+                <input type="text" class="form-control form-control-lg" id="buscarPlaneta"
+                    placeholder="Buscar planeta...">
+
+            </div>
+
+        </div>
+
+        <!-- CARDS DE PLANETAS -->
+        <section>
+
+            <!-- MERCURIO -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Mercurio3.jpg" class="img-fluid planeta-img" alt="Mercurio">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>☿ Mercurio</h2>
+
+                    <p>
+                        Mercurio es el planeta más cercano al Sol y también el más pequeño del Sistema Solar. Debido a
+                        su proximidad al Sol, experimenta temperaturas extremadamente altas durante el día y muy bajas
+                        durante la noche. No posee atmósfera significativa que retenga el calor ni satélites naturales.
+                        Su superficie está cubierta de cráteres, lo que le da un aspecto similar al de la Luna.
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 57.9 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 4 879 km</li>
+
+                        <li class="list-group-item">Temperatura: -180°C a 430°C</li>
+
+                        <li class="list-group-item">Lunas: 0</li>
+
+                    </ul>
+
+                    <button class="btn btn-warning mt-3" onclick="abrirModal('Mercurio')">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- VENUS -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Venus.jpg" class="img-fluid planeta-img">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>♀ Venus</h2>
+
+                    <p>
+
+                        Venus es el segundo planeta del Sistema Solar y es conocido como el "planeta hermano" de la
+                        Tierra debido a su tamaño y composición similares. Sin embargo, posee una atmósfera muy densa
+                        rica en dióxido de carbono que provoca un intenso efecto invernadero, convirtiéndolo en el
+                        planeta más caliente del Sistema Solar. Además, gira en sentido contrario al de la mayoría de
+                        los demás planetas.
+
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 108 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 12 104 km</li>
+
+                        <li class="list-group-item">Temperatura: 464°C</li>
+
+                        <li class="list-group-item">Lunas: 0</li>
+
+                    </ul>
+
+                    <button class="btn btn-warning mt-3" onclick="abrirModal('Venus')">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- TIERRA -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Tierra.webp" class="img-fluid planeta-img">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>🌍 Tierra</h2>
+
+                    <p>
+
+                        La Tierra es el tercer planeta del Sistema Solar y el único lugar conocido donde existe vida. Su
+                        abundancia de agua líquida, una atmósfera rica en oxígeno y una temperatura adecuada permiten el
+                        desarrollo de una enorme diversidad de organismos. También cuenta con un único satélite natural,
+                        la Luna, que influye en las mareas y en la estabilidad del eje terrestre.
+
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 149.6 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 12 742 km</li>
+
+                        <li class="list-group-item">Temperatura: 15°C</li>
+
+                        <li class="list-group-item">Lunas: 1</li>
+
+                    </ul>
+
+                    <button class="btn btn-info mt-3" onclick="abrirModal('Tierra')">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- MARTE -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Marte.jpg" class="img-fluid planeta-img">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>♂ Marte</h2>
+
+                    <p>
+
+                        Marte, conocido como el "planeta rojo", es el cuarto planeta del Sistema Solar. Su
+                        característico color rojizo se debe al óxido de hierro presente en su superficie. Posee montañas
+                        gigantes, profundos cañones y casquetes polares de hielo. Actualmente es uno de los principales
+                        objetivos de la exploración espacial debido a la posibilidad de que haya albergado agua líquida
+                        y condiciones favorables para la vida en el pasado.
+
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 228 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 6 779 km</li>
+
+                        <li class="list-group-item">Temperatura: -63°C</li>
+
+                        <li class="list-group-item">Lunas: 2</li>
+
+                    </ul>
+
+                    <button class="btn btn-danger mt-3" onclick="abrirModal('Marte')">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- JÚPITER -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Jupiter.png" class="img-fluid planeta-img" alt="Júpiter">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>♃ Júpiter</h2>
+
+                    <p>
+
+                        Júpiter es el planeta más grande del Sistema Solar y un gigante gaseoso formado principalmente
+                        por hidrógeno y helio. Es famoso por su Gran Mancha Roja, una enorme tormenta que lleva activa
+                        durante siglos. Además, posee un poderoso campo magnético y más de noventa lunas conocidas,
+                        entre ellas Ganímedes, la luna más grande de todo el Sistema Solar.
+
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 778 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 139 820 km</li>
+
+                        <li class="list-group-item">Temperatura: -145°C</li>
+
+                        <li class="list-group-item">Lunas: 95</li>
+
+                    </ul>
+
+                    <button class="btn btn-warning mt-3" onclick="abrirModal('Jupiter')">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- SATURNO -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Saturno-card.avif" class="img-fluid planeta-img" alt="Saturno">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>♄ Saturno</h2>
+
+                    <p>
+
+                        Saturno es el sexto planeta del Sistema Solar y destaca por su espectacular sistema de anillos,
+                        compuesto por millones de fragmentos de hielo, roca y polvo. Es un gigante gaseoso con una
+                        densidad tan baja que, teóricamente, podría flotar sobre un océano gigantesco. También alberga
+                        numerosas lunas, incluyendo Titán, una de las más interesantes para la investigación científica.
+
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 1 430 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 116 460 km</li>
+
+                        <li class="list-group-item">Temperatura: -178°C</li>
+
+                        <li class="list-group-item">Lunas: 146</li>
+
+                    </ul>
+
+                    <button class="btn btn-warning mt-3" onclick="abrirModal('Saturno')">
+                        Ver más
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- URANO -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Urano3.jpg" class="img-fluid planeta-img" alt="Urano">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>⛢ Urano</h2>
+
+                    <p>
+
+                        Urano es el séptimo planeta del Sistema Solar y pertenece al grupo de los gigantes helados. Su
+                        característica más llamativa es la inclinación extrema de su eje de rotación, que hace que
+                        prácticamente gire de lado. Está compuesto principalmente por agua, amoníaco y metano
+                        congelados, siendo este último el responsable de su característico color azul verdoso.
+
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 2 870 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 50 724 km</li>
+
+                        <li class="list-group-item">Temperatura: -224°C</li>
+
+                        <li class="list-group-item">Lunas: 28</li>
+
+                    </ul>
+
+                    <button class="btn btn-info mt-3" onclick="abrirModal('Urano')">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- NEPTUNO -->
+
+            <div class="row align-items-center mb-5 planeta-card">
+
+                <div class="col-lg-5 text-center">
+
+                    <img src="img/Planetas/Neptuno.jpg" class="img-fluid planeta-img" alt="Neptuno">
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <h2>♆ Neptuno</h2>
+
+                    <p>
+
+                        Neptuno es el planeta más lejano del Sol y el último del Sistema Solar. Es un gigante helado
+                        conocido por sus intensos vientos, considerados los más rápidos del Sistema Solar, capaces de
+                        superar los 2 000 km/h. Su color azul profundo se debe al metano presente en su atmósfera, y su
+                        mayor satélite, Tritón, presenta actividad geológica y géiseres de nitrógeno.
+
+                    </p>
+
+                    <ul class="list-group">
+
+                        <li class="list-group-item">Distancia al Sol: 4 500 millones km</li>
+
+                        <li class="list-group-item">Diámetro: 49 244 km</li>
+
+                        <li class="list-group-item">Temperatura: -214°C</li>
+
+                        <li class="list-group-item">Lunas: 16</li>
+
+                    </ul>
+
+                    <button class="btn btn-primary mt-3" onclick="abrirModal('Neptuno')">
+
+                        Ver más
+
+                    </button>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SISTEMA SOLAR 2D -->
+
+        <section id="sistema-interactivo" class="container-fluid py-5">
+
+            <div class="text-center mb-5">
+
+                <h2 class="display-4">
+
+                    ☀ Sistema Solar 2D
+
+                </h2>
+
+                <p class="lead">
+
+                    Obseva la posición de los planetas y la trayectoria de la sonda Voyager 1!
+
+
+                </p>
+
+                <p class="lead">
+
+                    Leyenda: ☀ Sol, ☿ Mercurio, ♀ Venus, 🌍 Tierra, ♂ Marte, ♃ Júpiter, ♄ Saturno, ⛢ Urano, ♆
+                    Neptuno, 🚀 Voyager 1
+
+                </p>
+
+            </div>
+
+            <div id="solar-system">
+
+                <!-- SOL -->
+
+                <div id="sun">
+
+                    <div class="sun-glow"></div>
+
+                    <span>☀</span>
+
+                </div>
+
+                <!-- ÓRBITAS -->
+
+                <div class="orbit orbit-mercurio">
+
+                    <div class="planet mercurio">
+
+                        ☿
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-venus">
+
+                    <div class="planet venus" data-planeta="Venus">
+
+                        ♀
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-tierra">
+
+                    <div class="planet tierra" data-planeta="Tierra">
+
+                        🌍
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-marte">
+
+                    <div class="planet marte" data-planeta="Marte">
+
+                        ♂
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-jupiter">
+
+                    <div class="planet jupiter" data-planeta="Jupiter">
+
+                        ♃
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-saturno">
+
+                    <div class="planet saturno" data-planeta="Saturno">
+
+                        ♄
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-urano">
+
+                    <div class="planet urano" data-planeta="Urano">
+
+                        ⛢
+
+                    </div>
+
+                </div>
+
+                <div class="orbit orbit-neptuno">
+
+                    <div class="planet neptuno" data-planeta="Neptuno">
+
+                        ♆
+
+                    </div>
+
+                </div>
+
+                <!-- VOYAGER -->
+
+                <div id="voyager">
+
+                    🚀
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LUNAS PRINCIPALES -->
+
+        <section id="lunas" class="container py-5">
+
+            <div class="text-center mb-5">
+
+                <h2 class="display-4">
+                    🌙 Lunas más importantes
+                </h2>
+
+                <p class="lead">
+                    Descubre algunos de los satélites naturales más fascinantes del Sistema Solar.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- LUNA -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Luna.jpg" class="card-img-top" alt="Luna">
+                        <div class="card-body">
+                            <h3>🌙 Luna</h3>
+                            <p>
+                                La Luna es el único satélite natural de la Tierra y el quinto satélite más grande del
+                                Sistema Solar. Se formó hace aproximadamente 4 500 millones de años y desempeña un papel
+                                fundamental en las mareas, la estabilidad del eje terrestre y el clima del planeta.
+                                Además, fue el primer y único cuerpo celeste, aparte de la Tierra, visitado por seres
+                                humanos durante las misiones Apolo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- EUROPA -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Europa.jpg" class="card-img-top" alt="Europa">
+                        <div class="card-body">
+                            <h3>🌊 Europa</h3>
+                            <p>
+                                Europa es una de las cuatro grandes lunas de Júpiter descubiertas por Galileo Galilei en
+                                1610. Su superficie está cubierta por una gruesa capa de hielo bajo la cual se cree que
+                                existe un inmenso océano de agua líquida. Debido a estas características, es uno de los
+                                lugares más prometedores del Sistema Solar para la búsqueda de vida extraterrestre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TITAN -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Titan.jpg" class="card-img-top" alt="Titán">
+                        <div class="card-body">
+                            <h3>🟠 Titán</h3>
+                            <p>
+                                Titán es la luna más grande de Saturno y la segunda más grande del Sistema Solar, solo
+                                superada por Ganímedes. Posee una atmósfera densa compuesta principalmente por nitrógeno
+                                y presenta ríos, lagos y mares de metano y etano líquidos. Estas características la
+                                convierten en uno de los mundos más interesantes para el estudio de la química
+                                prebiótica.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TRITON -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Triton.jpg" class="card-img-top" alt="Tritón">
+                        <div class="card-body">
+                            <h3>❄ Tritón</h3>
+                            <p>
+                                Tritón es el satélite más grande de Neptuno y uno de los objetos más fríos conocidos del
+                                Sistema Solar. Orbita en sentido contrario al de la rotación de su planeta, lo que
+                                indica que probablemente fue capturado por la gravedad de Neptuno hace millones de años.
+                                Su superficie presenta géiseres de nitrógeno y un terreno helado muy activo desde el
+                                punto de vista geológico.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GANIMEDES -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Ganimedes.jpg" class="card-img-top" alt="Ganímedes">
+                        <div class="card-body">
+                            <h3>🪐 Ganímedes</h3>
+                            <p>
+                                Ganímedes es la luna más grande del Sistema Solar, incluso más grande que el planeta
+                                Mercurio. Pertenece al grupo de las lunas galileanas de Júpiter y es el único satélite
+                                conocido que posee un campo magnético propio. Los científicos creen que bajo su
+                                superficie helada existe un océano de agua salada que podría contener más agua que todos
+                                los océanos de la Tierra juntos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IO -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Io.jpg" class="card-img-top" alt="Ío">
+                        <div class="card-body">
+                            <h3>🌋 Ío</h3>
+                            <p>
+                                Ío es una de las lunas más extraordinarias de Júpiter y el cuerpo con mayor actividad
+                                volcánica de todo el Sistema Solar. La intensa gravedad de Júpiter y de sus lunas
+                                vecinas genera enormes fuerzas de marea que calientan su interior, provocando constantes
+                                erupciones volcánicas. Su superficie cambia continuamente debido a la lava y los
+                                depósitos de azufre.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CALISTO -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Calisto.jpg" class="card-img-top" alt="Calisto">
+                        <div class="card-body">
+                            <h3>🪨 Calisto</h3>
+                            <p>
+                                Calisto es la segunda luna más grande de Júpiter y una de las superficies más antiguas y
+                                llenas de cráteres del Sistema Solar. A diferencia de otras lunas galileanas, presenta
+                                muy poca actividad geológica, lo que ha permitido conservar impactos producidos hace
+                                miles de millones de años. Se considera un posible destino para futuras bases espaciales
+                                debido a su relativa estabilidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ENCELADO -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow luna-card">
+                        <img src="img/Lunas/Encelado.jpg" class="card-img-top" alt="Encélado">
+                        <div class="card-body">
+                            <h3>💧 Encélado</h3>
+                            <p>
+                                Encélado es una pequeña luna de Saturno cubierta casi por completo de hielo, famosa por
+                                expulsar gigantescos chorros de vapor de agua y partículas heladas desde su polo sur.
+                                Estas emisiones revelan la existencia de un océano líquido bajo su superficie. Gracias a
+                                ello, Encélado es uno de los principales candidatos para albergar condiciones favorables
+                                para la vida fuera de la Tierra.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CENTRO DE CONTROL -->
+
+        <section id="control" class="container-fluid py-5">
+
+            <div class="container">
+
+                <div class="text-center mb-5">
+
+                    <h2 class="display-4">
+
+                        📡 Centro de Control Espacial
+
+                    </h2>
+
+                    <p class="lead">
+
+                        Datos científicos en tiempo real.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <div class="col-lg-3">
+
+                        <div class="card text-center shadow h-100">
+
+                            <div class="card-body">
+
+                                <h2>🚀</h2>
+
+                                <h4>Voyager 1</h4>
+
+                                <h3 id="voyagerDistance">
+
+                                    Cargando...
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <div class="card text-center shadow h-100">
+
+                            <div class="card-body">
+
+                                <h2>☀</h2>
+
+                                <h4>Distancia luz Sol-Tierra</h4>
+
+                                <h3>
+
+                                    8 min 19 s
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <div class="card text-center shadow h-100">
+
+                            <div class="card-body">
+
+                                <h2>🌎</h2>
+
+                                <h4>Distancia Tierra-Luna</h4>
+
+                                <h3>
+
+                                    384 400 km
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <div class="card text-center shadow h-100">
+
+                            <div class="card-body">
+
+                                <h2>🛰</h2>
+
+                                <h4>James Webb</h4>
+
+                                <h3>
+
+                                    Operativo
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PANEL DE CONTROL VOYAGER 1 -->
+
+        <section id="panel-control" class="container py-5">
+
+            <h2 class="text-center mb-4">📡 Panel de Control Voyager 1</h2>
+
+            <div class="row g-4 text-center">
+
+                <div class="col-md-4">
+                    <div class="card shadow p-3">
+                        <h4>Señal</h4>
+                        <h2 id="senal">--</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow p-3">
+                        <h4>Velocidad</h4>
+                        <h2 id="velocidad">--</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow p-3">
+                        <h4>Potencia Electrica</h4>
+                        <h2 id="potencia">--</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow p-3">
+                        <h4>Temperatura</h4>
+                        <h2 id="temperatura">--</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow p-3">
+                        <h4>Estado</h4>
+                        <h2 id="estado">--</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow p-3">
+                        <h4>Dirección</h4>
+                        <h2 id="direccion">--</h2>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HISTORIA DEL SISTEMA SOLAR -->
+
+        <section id="historia" class="container py-5">
+
+            <div class="text-center mb-5">
+
+                <h2 class="display-4">
+                    📜 Historia del Sistema Solar
+                </h2>
+
+                <p class="lead">
+                    Los acontecimientos más importantes relacionados con el estudio del Sistema Solar.
+                </p>
+
+            </div>
+
+            <ol class="list-group list-group-numbered shadow">
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>☀ Hace 4,600 millones de años</h5>
+                    <p>
+                        Una enorme nube de gas y polvo comenzó a colapsar por efecto de la gravedad,
+                        formando el Sol en el centro y un disco protoplanetario alrededor.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🪐 Formación de los planetas</h5>
+                    <p>
+                        Los materiales del disco comenzaron a unirse mediante colisiones,
+                        formando planetesimales que dieron origen a los ocho planetas del Sistema Solar.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🌍 Formación de la Tierra</h5>
+                    <p>
+                        La Tierra se consolidó hace aproximadamente 4,540 millones de años.
+                        Poco después se formó la Luna tras el impacto de un gran objeto con nuestro planeta.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🔭 1543 - Nicolás Copérnico</h5>
+                    <p>
+                        Publicó la teoría heliocéntrica, proponiendo que los planetas giran alrededor del Sol,
+                        cambiando para siempre nuestra comprensión del Universo.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🔭 1609 - Galileo Galilei</h5>
+                    <p>
+                        Utilizó el telescopio para observar las cuatro lunas más grandes de Júpiter,
+                        demostrando que no todos los cuerpos celestes giran alrededor de la Tierra.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🚀 1957 - Inicio de la era espacial</h5>
+                    <p>
+                        El lanzamiento del Sputnik 1 marcó el comienzo de la exploración espacial moderna.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🌕 1969 - Llegada a la Luna</h5>
+                    <p>
+                        La misión Apollo 11 llevó por primera vez seres humanos a la superficie lunar,
+                        un hito histórico en la exploración espacial.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🛰 1977 - Lanzamiento de las Voyager</h5>
+                    <p>
+                        Las sondas Voyager 1 y Voyager 2 comenzaron su viaje para explorar
+                        los planetas gigantes y posteriormente el espacio interestelar.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🛰 1990 - Telescopio Espacial Hubble</h5>
+                    <p>
+                        El Hubble revolucionó la astronomía al capturar imágenes del Universo
+                        con una calidad nunca antes vista.
+                    </p>
+                </li>
+
+                <li class="list-group-item bg-dark text-light">
+                    <h5>🔭 2021 - Telescopio James Webb</h5>
+                    <p>
+                        Fue lanzado el telescopio espacial más potente construido hasta la fecha,
+                        permitiendo observar galaxias formadas poco después del Big Bang.
+                    </p>
+                </li>
+
+            </ol>
+
+        </section>
+
+        <!-- VIAJE DE LA LUZ -->
+
+        <section id="curiosidades" class="container py-5">
+
+            <section id="luz" class="container py-5">
+
+                <div class="text-center">
+
+                    <h2 class="display-4">
+
+                        🌠 Viaja a la velocidad de la luz
+
+                    </h2>
+
+                    <p class="lead">
+
+                        Observa cuánto tarda un fotón en recorrer todos los planetas del Sistema Solar.
+
+                    </p>
+
+                </div>
+
+                <div class="my-5">
+
+                    <div id="lineaLuz">
+
+                        <div id="foton"></div>
+
+                    </div>
+
+                </div>
+
+                <div class="row text-center">
+
+                    <div class="col-lg-4">
+
+                        <div class="card shadow">
+
+                            <div class="card-body">
+
+                                <h4>
+
+                                    Destino
+
+                                </h4>
+
+                                <h3 id="destinoActual">
+
+                                    Sol
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="card shadow">
+
+                            <div class="card-body">
+
+                                <h4>
+
+                                    Tiempo Luz
+
+                                </h4>
+
+                                <h3 id="tiempoLuz">
+
+                                    0 segundos
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="card shadow">
+
+                            <div class="card-body">
+
+                                <h4>
+
+                                    Distancia
+
+                                </h4>
+
+                                <h3 id="distanciaActual">
+
+                                    0 km
+
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-5">
+
+                    <button class="btn btn-warning btn-lg" id="iniciarViaje">
+
+                        🚀 Iniciar viaje
+
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!--CALCULADORA DE PESO-->
+
+            <section class="container py-5">
+
+                <div class="text-center mb-5">
+
+                    <h2 class="display-4">
+
+                        ⚖ ¿Cuánto pesarías en otro planeta?
+
+                    </h2>
+
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <div class="col-lg-4">
+
+                        <input type="number" id="peso" class="form-control form-control-lg" placeholder="Tu peso (kg)">
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <select id="planetaPeso" class="form-select form-select-lg">
+
+                            <option>Mercurio</option>
+                            <option>Venus</option>
+                            <option>Tierra</option>
+                            <option>Marte</option>
+                            <option>Júpiter</option>
+                            <option>Saturno</option>
+                            <option>Urano</option>
+                            <option>Neptuno</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <div class="text-center mt-4">
+
+                    <button class="btn btn-warning btn-lg" id="calcularPeso">
+
+                        Calcular
+
+                    </button>
+
+                </div>
+
+                <h2 class="text-center mt-5" id="resultadoPeso">
+
+                </h2>
+
+            </section>
+
+            <!--QUIZ ESPACIAL-->
+
+            <section class="container py-5">
+
+                <div class="text-center mb-5">
+
+                    <h2>
+
+                        🧠 Quiz Espacial
+
+                    </h2>
+
+                </div>
+
+                <div class="card shadow">
+
+                    <div class="card-body">
+
+                        <h4 id="pregunta">
+
+                            ¿Cuál es el planeta más grande del Sistema Solar?
+
+                        </h4>
+
+                        <button class="btn btn-outline-primary w-100 my-2 respuesta">
+
+                            Júpiter
+
+                        </button>
+
+                        <button class="btn btn-outline-primary w-100 my-2 respuesta">
+
+                            Marte
+
+                        </button>
+
+                        <button class="btn btn-outline-primary w-100 my-2 respuesta">
+
+                            Venus
+
+                        </button>
+
+                        <button class="btn btn-outline-primary w-100 my-2 respuesta">
+
+                            Mercurio
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <h3 class="text-center mt-4" id="puntaje">
+
+                    Puntaje: 0
+
+                </h3>
+
+            </section>
+
+            <!--SABIAS QUE?-->
+
+            <section class="container py-5">
+
+                <div class="text-center">
+
+                    <h2>
+
+                        💡 ¿Sabías que...?
+
+                    </h2>
+
+                </div>
+
+                <div class="card shadow mt-5">
+
+                    <div class="card-body text-center">
+
+                        <h3 id="curiosidad">
+
+                            La luz del Sol tarda aproximadamente 8 minutos y 19 segundos en llegar a la Tierra.
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--FOOTER-->
+
+            <footer class=" bg-dark text-light py-5">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-4">
+
+                            <h3>
+
+                                ☀ Cosmos Explorer
+
+                            </h3>
+
+                            <p>
+
+                                Explora el Universo con información científica,
+                                imágenes y misiones espaciales.
+
+                            </p>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <h4>
+
+                                Enlaces
+
+                            </h4>
+
+                            <ul class="list-unstyled">
+
+                                <li>
+
+                                    <a href="Contacto.html">
+
+                                        Contacto
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="Noticias y Videos.html">
+
+                                        Noticias
+
+                                    </a>
+
+                                </li>
+
+                                <li>
+
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#privacidadModal">
+
+                                        Política de Privacidad
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <h4>
+
+                                Contacto Email
+
+                            </h4>
+
+                            <p>
+
+                                cosmosexplorer@gmail.com
+
+                            </p>
+
+                            <a href="mailto:cosmosexplorer@gmail.com" class="btn btn-warning">
+
+                                Enviar correo
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <hr>
+
+                <p class="text-center">
+
+                    © 2026 Cosmos Explorer.
+                    Todos los derechos reservados.
+
+                </p>
+
+            </footer>
+
+            <!-- MODAL -->
+
+            <div class="modal fade" id="modalPlaneta">
+
+                <div class="modal-dialog modal-lg">
+
+                    <div class="modal-content bg-dark text-light">
+
+                        <div class="modal-header">
+
+                            <h3 id="tituloModal"></h3>
+
+                            <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                            <img id="imagenModal" class="img-fluid mb-4">
+
+                            <ul id="listaModal"></ul>
+
+                            <p id="descripcionModal"></p>
+
+                            <p>
+
+                                <b>Misiones:</b>
+
+                                <span id="misionesModal"></span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- MODAL POLITICA DE PRIVACIDAD -->
+            <div class="modal fade" id="privacidadModal">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Política de Privacidad</h3>
+
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <p>
+                                Este sitio tiene fines educativos. No recopila información
+                                personal ni comparte datos con terceros.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- BOTÓN PARA VOLVER ARRIBA -->
+
+            <button id="btnTop" class="btn btn-warning">
+
+                <i class="bi bi-arrow-up"></i>
+
+            </button>
+
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+            <script src="js/script.js"></script>
+
+</body>
+
+</html>
